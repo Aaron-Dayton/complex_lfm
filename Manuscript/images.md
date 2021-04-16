@@ -1,6 +1,8 @@
 # Images {#images}
 
 
-This image has a bad file name and is a gif, so needs to be converted:
+This is an image with no src, but with a caption:
 
-![](images/811.strip.gif)
+![Some caption]()
+
+This image has a filename including `.`s: ![](images/bad.file.name.png)
