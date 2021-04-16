@@ -1,39 +1,44 @@
 # Images {#images}
 
-![](apple.png)
+![](symbols/apple.png)
 
-![](apple space.png)
+![](symbols/apple space.png)
 
-![](apple_.png)
+![](symbols/apple_.png)
 
-![](apple-.png)
+![](symbols/apple-.png)
 
-![](apple:.png)
+![](symbols/apple:.png)
 
-![](apple!.png)
+![](symbols/apple!.png)
 
-![](apple().png)
+![](symbols/apple().png)
 
-![](apple[].png)
+![](symbols/apple[].png)
 
-![](apple@.png)
+![](symbols/apple@.png)
 
-![](apple*.png)
+![](symbols/apple*.png)
 
-![](apple&.png)
+![](symbols/apple&.png)
 
-![](apple#.png)
+![](symbols/apple#.png)
 
-![](apple%.png)
+![](symbols/apple%.png)
 
-![](apple`.png)
+![](symbols/apple`.png)
 
-![](apple^.png)
+![](symbols/apple^.png)
 
-![](apple+.png)
+![](symbols/apple+.png)
 
-![](apple=.png)
+![](symbols/apple=.png)
 
-![](apple~.png)
+![](symbols/apple~.png)
 
-![](apple$.png)
+![](symbols/apple$.png)
+
+![](symbols/apple<>,?''"";|.png)
+
+![](symbols/~!@#$%^&*()_+`1234567890-=qwertyuiop[]\QWERTYUIOP{}|    asdfghjkl;''ASDFGHJKL:""zxcvbnm,/ZXCVBNM<>? .png)
+
