@@ -1,0 +1,17 @@
+# Image Scaling
+
+## inline Scaling
+
+In the following paragraph, the images are 144 DPI and should be scaled by Leanpub so that they're about the same height as the text. Without scaling they're around twice as high.
+
+The Text  tools correspond to four of the tools described earlier: a Text ![](images/text-icon-ios-inline.png) tool for creating imprints; a Comment ![](images/comment-icon-ios-inline.png) tool for creating comment boxes; a Note ![](images/note-icon-ios-inline.png) tool for placing note icons, with their associated pop-up note windows, on the page; and an Audio ![](images/audio-icon-ios-inline.png) tool for creating and placing audio annotations.
+
+## standalone-image scaling
+
+All three cat images are 600x400 pixels and have the same data in each pixel, but have different DPIs. The DPI should not be ignored in any version of the book -- the higher DPI images should be smaller than the low DPI images.
+
+![75 DPI (rescaled to 150 because it's a bit too big)](images/kitty-721.jpg)
+
+![300 DPI](images/kitty-3001.jpg)
+
+![1000 DPI](images/kitty-10001.jpg)

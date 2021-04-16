@@ -1,0 +1,55 @@
+# Code Blocks
+
+Long stretches of newlines followed by codeblocks hang Kramdown
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+~~~
+def foo
+  "foo"
+end
+~~~
+
+
+Done.
+
+## this caused generation to hang
+
+It was generating a really deep nested list and took hours to generate latex:
+
+{linenos=off}
+- + - + + - + + - - + + - - + - + + - + - + - - + - + - - + - - + - - + + - -

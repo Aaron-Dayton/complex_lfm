@@ -1,0 +1,224 @@
+{frontmatter}
+
+# Tables
+
+{title="This is a *test* of `formatting` in titles. **Roooar!**."}
+| one | two | three |
+|-------------------|
+| a   | b   | c     |
+|-------------------|
+| d   | e   | f     |
+
+## Widths
+
+{title="default width"}
+| one | two | three |
+|-------------------|
+| a   | b   | c     |
+|-------------------|
+| d   | e   | f     |
+
+
+{title="squished",width="squished"}
+| one | two | three |
+|-------------------|
+| a   | b   | c     |
+|-------------------|
+| d   | e   | f     |
+
+{title="comfortable",width="comfortable"}
+| one | two | three |
+|-------------------|
+| a   | b   | c     |
+|-------------------|
+| d   | e   | f     |
+
+
+{title="wide",width="wide"}
+| one | two | three |
+|-------------------|
+| a   | b   | c     |
+|-------------------|
+| d   | e   | f     |
+
+{title="40%",width="40"}
+| one | two | three |
+|-------------------|
+| a   | b   | c     |
+|-------------------|
+| d   | e   | f     |
+
+{title="60%",width="60%"}
+| one | two | three |
+|-------------------|
+| a   | b   | c     |
+|-------------------|
+| d   | e   | f     |
+
+
+## Alignment
+
+{title="default width"}
+| left | center | right |
+|:-----|:------:|------:|
+| a   | b   | c     |
+|-------------------|
+| d   | e   | f     |
+
+
+{title="squished", width="squished"}
+| left | center | right |
+|:-----|:------:|------:|
+| a   | b   | c     |
+|-------------------|
+| d   | e   | f     |
+
+
+{title="comfortable", width="comfortable"}
+| left | center | right |
+|:-----|:------:|------:|
+| a   | b   | c     |
+|-------------------|
+| d   | e   | f     |
+
+
+{title="wide", width="wide"}
+| left | center | right |
+|:-----|:------:|------:|
+| a   | b   | c     |
+|-------------------|
+| d   | e   | f     |
+
+
+{title="40%", width="40%"}
+| left | center | right |
+|:-----|:------:|------:|
+| a   | b   | c     |
+|-------------------|
+| d   | e   | f     |
+
+
+## Wrapping
+
+{title="wrapping when squished", width="squished"}
+| one | two | three |
+|-------------------|
+| a really long entry in a table | another quite long and quite boring table cell. | I hope these wrap, but I really, really don't think they do, unfortunately. |
+|-------------------|
+| Second line | Another cell | Cell again |
+|-------------------|
+
+
+{title="wrapping when wide", width="wide"}
+| one | two | three |
+|-------------------|
+| a really long entry in a table | another quite long and quite boring table cell. | I hope these wrap, but I really, really don't think they do, unfortunately. |
+|-------------------|
+| Second line | Another cell | Cell again |
+|-------------------|
+
+
+## Warnings and such
+
+W> Warnings before tables should not set the border color to white.
+
+
+|Level|Description|
+|------|----------|
+|850|***Total*** Surrender to God's Will|
+| |The Void|
+|600+|Enlightenment|
+|570|Sainthood|
+|540|Unconditional Love|
+|500*|Love|
+|500+|Nonlinear Living|
+|400|Reason|
+|200*|Courage|
+|200+|Ethical Living|
+|100|Fear|
+|&nbsp;&nbsp;0|Death|
+
+\* = turning point
+
+
+
+
+A> ### A table in an aside with a title
+A>
+A>{title="I have a very *nice* title"}
+A>|Level|Description|
+A>|------|----------|
+A>|850|***Total*** Surrender to God's Will|
+A>| |The Void|
+A>|600+|Enlightenment|
+A>|570|Sainthood|
+A>|540|Unconditional Love|
+A>|500*|Love|
+A>|500+|Nonlinear Living|
+A>|400|Reason|
+A>|200*|Courage|
+A>|200+|Ethical Living|
+A>|100|Fear|
+A>|&nbsp;&nbsp;0|Death|
+A>
+A>\* = turning point
+
+
+A> ### A table in an aside without a title
+A>
+A>|Level|Description|
+A>|------|----------|
+A>|850|***Total*** Surrender to God's Will|
+A>| |The Void|
+A>|600+|Enlightenment|
+A>|570|Sainthood|
+A>|540|Unconditional Love|
+A>|500*|Love|
+A>|500+|Nonlinear Living|
+A>|400|Reason|
+A>|200*|Courage|
+A>|200+|Ethical Living|
+A>|100|Fear|
+A>|&nbsp;&nbsp;0|Death|
+A>
+A>\* = turning point
+
+
+
+W> ### A table in a warning
+W>
+W> |Level|Description|
+W> |------|----------|
+W> |850|***Total*** Surrender to God's Will|
+W> | |The Void|
+W> |600+|Enlightenment|
+W> |570|Sainthood|
+W> |540|Unconditional Love|
+W> |500*|Love|
+W> |500+|Nonlinear Living|
+W> |400|Reason|
+W> |200*|Courage|
+W> |200+|Ethical Living|
+W> |100|Fear|
+W> |&nbsp;&nbsp;0|Death|
+W>
+W>\* = turning point
+
+# Titles
+
+{title="This is a boring title"}
+| left | center | right |
+|:-----|:------:|------:|
+| a   | b   | c     |
+|-------------------|
+| d   | e   | f     |
+
+{title="I have a url <http://example.com>"}
+| left | center | right |
+|:-----|:------:|------:|
+| a   | b   | c     |
+|-------------------|
+| d   | e   | f     |
+
+
+

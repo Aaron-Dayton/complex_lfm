@@ -1,0 +1,1021 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head profile="http://gmpg.org/xfn/11">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	
+	<!-- nivi title>Venture Hacks &#8212; Good advice for startups.</title -->
+	<title>
+	Venture Hacks &#45; Good advice for startups.	</title>
+	
+	<meta name="generator" content="WordPress 2.8.4" /> <!-- leave this for stats -->
+	
+	<link rel="stylesheet" href="http://venturehacks.com/wordpress/wp-content/themes/Cutline 1.1/style.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="http://venturehacks.com/wordpress/wp-content/themes/Cutline 1.1/custom.css" type="text/css" media="screen" />
+	<!--[if lte IE 7]>
+	<link rel="stylesheet" type="text/css" href="http://venturehacks.com/wordpress/wp-content/themes/Cutline 1.1/ie7.css" media="screen" />
+	<![endif]-->
+	<!--[if lte IE 6]>
+	<link rel="stylesheet" type="text/css" href="http://venturehacks.com/wordpress/wp-content/themes/Cutline 1.1/ie6.css" media="screen" />
+	<![endif]-->
+	<link rel="alternate" type="application/rss+xml" title="Venture Hacks RSS Feed" href="http://feeds.venturehacks.com/venturehacks" />
+	<link rel="pingback" href="http://venturehacks.com/wordpress/xmlrpc.php" />
+
+	<script type='text/javascript' src='http://venturehacks.com/wordpress/wp-includes/js/jquery/jquery.js?ver=1.3.2'></script>
+<script type='text/javascript' src='http://venturehacks.com/wordpress/wp-content/plugins/google-analyticator/external-tracking.min.js?ver=5.3.1'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://venturehacks.com/wordpress/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://venturehacks.com/wordpress/wp-includes/wlwmanifest.xml" /> 
+<link rel='index' title='Venture Hacks' href='http://venturehacks.com' />
+<meta name="generator" content="WordPress 2.8.4" />
+<script language="javascript" type="text/javascript">
+<!--
+		function collapseThread( theId ) {
+			var comment = document.getElementById(theId);
+			if(!comment)
+			{
+				alert("ERROR:\nThe document structure is different\nfrom what Threaded Comments expects.\nYou are missing the element '"+theId+"'");
+				return;
+			}
+			var theBody = findBody(comment);
+			if(comment.className.indexOf("collapsed") > -1) {
+				comment.className = comment.className.replace(" collapsed", "");;
+			} else {
+				comment.className += " collapsed";
+			}
+		}
+
+		function expandThread( theId ) {
+			var comment = document.getElementById(theId);
+			if(!comment)
+			{
+				alert("ERROR:\nThe document structure is different\nfrom what Threaded Comments expects.\nYou are missing the element '"+theId+"'");
+				return;
+			}
+			var theBody = findBody(comment);
+			if(comment.className.indexOf("collapsed") > -1) {
+				comment.className = comment.className.replace(" collapsed", "");;
+			} 
+		}
+		
+		function findBody(el)
+		{
+			var divs = el.getElementsByTagName("div");
+			var ret;
+			for(var i = 0; i < divs.length; ++i) {
+				if(divs.item(i).className.indexOf("body") > -1)
+					return divs.item(i);
+			}
+			return false;
+		}
+	
+		function onAddComment() {
+			//checkDocumentIntegrity();
+			var el = document.getElementById("commentform");
+			// Future release: Check if form is filled correctly and mark the form fields.
+			el.submit();
+		}
+		
+		function moveAddCommentBelow(theId, threadId, collapse)
+		{
+			expandThread( theId );
+			var addComment = document.getElementById("addcomment");
+			if(!addComment)
+			{
+			  	alert("ERROR:\nThreaded Comments can't find the 'addcomment' div.\nThis is probably because you have changed\nthe comments.php file.\nMake sure there is a tag around the form\nthat has the id 'addcomment'"); 
+				return
+			}
+			var comment = document.getElementById(theId);
+// deactivated for venturehacks.com
+//			if(collapse)
+//			{
+//				for(var i = 0; i < comment.childNodes.length; ++i) {
+//					var c = comment.childNodes.item(i);
+//					if(typeof(c.className) == "string" && c.className.indexOf("collapsed")<0) {
+//						c.className += " collapsed";
+//					}
+//				}
+//			}
+			addComment.parentNode.removeChild(addComment);
+
+			comment.appendChild(addComment);
+			if(comment.className.indexOf("alt")>-1) {
+				addComment.className = addComment.className.replace(" alt", "");					
+			} else {
+				addComment.className += " alt";
+			}
+		        var replyId = document.getElementById("comment_reply_ID");
+			if(replyId == null)
+			{
+				alert("Brians Threaded Comments Error:\nThere is no hidden form field called\n'comment_reply_ID'. This is probably because you\nchanged the comments.php file and forgot\nto include the field. Please take a look\nat the original comments.php and copy the\nform field over.");
+			}
+			replyId.value = threadId;
+			var reRootElement = document.getElementById("reroot");
+			if(reRootElement == null)
+			{
+				alert("Brians Threaded Comments Error:\nThere is no anchor tag called 'reroot' where\nthe comment form starts.\nPlease compare your comments.php to the original\ncomments.php and copy the reroot anchor tag over.");
+			}
+			reRootElement.style.display = "block";
+			var aTags = comment.getElementsByTagName("A");
+			var anc = aTags.item(0).id;
+			//document.location.href = "#"+anc;
+			document.getElementById("comment").focus();
+		}
+
+		function checkDocumentIntegrity()
+		{
+			str = "";
+			
+			str += checkElement("reroot","div tag");
+			str += checkElement("addcomment", "div tag");
+			str += checkElement("comment_reply_ID", "hidden form field");
+			str += checkElement("content", "div tag");
+			str += checkElement("comment", "textfield");
+			str += checkElement("addcommentanchor", "anchor tag");
+			
+			if(str != "")
+			{
+				str = "Brian's Threaded Comments are missing some of the elements that are required for it to function correctly.\nThis is probably the because you have changed the original comments.php that was included with the plugin.\n\nThese are the errors:\n" + str;
+				str += "\nYou should compare your comments.php with the original comments.php and make sure the required elements have not been removed.";
+
+				alert(str);
+			}
+		}
+               
+		function checkElement(theId, elDesc)
+		{
+			var el = document.getElementById(theId);
+			if(!el)
+			{
+				if(elDesc == null)
+					elDesc = "element";
+				return "- The "+elDesc+" with the ID '" +theId + "' is missing\n"; 
+			}
+			else 
+				return "";
+		}
+		
+		function reRoot()
+		{
+			var addComment = document.getElementById("addcomment");			
+			var reRootElement = document.getElementById("reroot");
+			reRootElement.style.display = "none";
+			var content = document.getElementById("comments");
+			if( !content )
+				content = document.getElementById("content");
+			if( content )
+			{
+				addComment.parentNode.removeChild(addComment);
+				content.appendChild(addComment);
+			}
+			addComment.className = addComment.className.replace(" alt", "");
+			// deactivated for venturehacks.com
+			//document.location.href = "#addcommentanchor";
+			//document.getElementById("comment").focus();				
+			document.getElementById("comment_reply_ID").value = "0";
+		}			
+		
+		function changeCommentSize(d)
+		{
+			var el = document.getElementById("comment");
+			var height = parseInt(el.style.height);
+			if(!height && el.offsetHeight)
+				height = el.offsetHeight;
+			height += d;
+			if(height < 20) 
+				height = 20;
+			el.style.height = height+"px";
+		}		
+-->
+</script>
+<style type="text/css">
+.comment 
+{
+	position: 				relative;
+	margin:					3px;
+	margin-top:				6px;
+/*	border: 				1px solid #666; */
+/*-VH padding:				4px 4px 4px 8px;*/
+/*+VH*/	padding:				20px 4px 4px 4px;
+	background-color:		#fff;
+/*+VH*/	border-top: 	1px solid #ddd;
+}
+
+.odd
+{
+	background-color: #f8f8f8;
+}
+
+.comment div {
+	position: 				relative;
+}
+
+.comment .comment img
+{
+	margin: 				0px;
+}
+
+.comment .collapseicon 
+{
+	width: 					13px;
+	height: 				13px;
+	overflow:				hidden;
+	background-image: 		url(http://venturehacks.com/wordpress/wp-content/plugins/briansthreadedcomments.php?image=subthread-open.png);
+}
+
+.collapsed .collapseicon 
+{
+	background-image: 		url(http://venturehacks.com/wordpress/wp-content/plugins/briansthreadedcomments.php?image=subthread.png);
+}
+
+
+.comment .reply {
+	text-align: 			right;
+	font-size: 				80%;
+	padding: 				0px 6px 6px 0px;
+}
+
+.comment
+{
+/*-VH	border: 	1px solid #ddd;*/
+/*+VH*/	border-left: 	1px solid #ddd;
+	margin-top: 			10px;
+}
+
+input#subscribe
+{
+	width: auto;
+}
+
+.comment .body .content
+{
+	padding:				0px 3px 0px 3px;
+	/*width: 					100%;	*/
+/*+VH*/	width: 					100%;
+	overflow: 				auto; 
+}
+
+.comment .title abbr
+{
+	border: none;
+}
+
+.collapsed .body, .collapsed .comment
+{
+	display:				none;
+}
+ 
+#commentform textarea {
+	width: 97%;
+}
+
+.btc_gravatar {
+	float: left;
+	margin: 0px 8px 4px 13px;
+}
+</style>
+
+<!-- nivi for google webmaster tools -->
+<meta name="verify-v1" content="pl+LkCgPh5ZLx4TN3hPQ3lfD2PMSU5tiQ8uVwAtmL5o=" />
+
+<!-- link rel="shortcut icon" href="http://venturehacks.com/wordpress/wp-content/themes/Cutline 1.1/favicon.ico" / -->
+
+<link rel="shortcut icon" href="http://venturehacks.com/wordpress/wp-content/themes/Cutline%201.1/favicon.ico" />
+
+</head>
+<body class="custom">
+
+<script type='text/javascript' src='http://track3.mybloglog.com/js/jsserv.php?mblID=2007040315581297'></script>
+
+<div id="container">
+
+	<div id="masthead" style="background-color:white;">
+		<!-- p id="login_register"><a href="/wordpress/wp-login.php">Login</a></p -->
+		<!-- div style="float:left;padding:5px 0 5px 10px;"><img src="/wordpress/wp-content/uploads/2007/04/vh-100.png"></div -->
+
+		<h1><img align="absbottom" width=45 src="http://venturehacks.com/wordpress/wp-content/uploads/2009/10/Peace-Logo.jpg"><a href="http://venturehacks.com">Venture Hacks</a></h1>	
+		<h3>Good advice for startups.</h3>
+		<!-- div id="disclaimer"><em><a href="/disclaimer" style="color:red;text-align:left;">Disclaimer: This is not legal advice.</a></em></div -->
+                <div class="caption" style="font-size: 9px; font-family: helvetica, arial, sans-serif; position: absolute; top: 10px; right: 63px;">
+                      SUPPORTED BY<br>
+                      <a href="http://www.kauffman.org/" title="The Kauffman Foundation" target="_blank"><img src="http://venturehacks.com/wordpress/wp-content/uploads/2010/08/kauffman_logo.png" alt="The Kauffman Foundation" style="width: 180px;"></a>
+                </div>
+	</div>
+
+	<ul id="nav">
+		<!-- li><a class="current" href="http://venturehacks.com">Home</a></li -->
+
+		<li><a href="/products">Products</a></li>
+
+		<li><a href="http://venturehacks.com/archives">Archives</a></li>
+		<!-- nivi <li><a href="http://venturehacks.com/term-sheet-hacks">Hacks</a></li>-->
+		<!-- li><a href="http://venturehacks.com/recommended">Recommended</a></li -->
+		<li><a href="http://twitter.com/venturehacks" target="window">@venturehacks</a></li>
+		<li><a href="/bookstore">Books</a></li>
+<li><a href="http://angel.co" >AngelList</a></li>
+		<!-- li><a href="/supporters">Supporters</a></li -->
+		<li><a href="/about">About</a></li>
+		<li class="rss"><a href="http://feeds.venturehacks.com/venturehacks">RSS</a></li>
+	</ul>
+	
+	<div id="header_img">
+				<!-- nivi -->
+		<img src="http://venturehacks.com/wordpress/wp-content/themes/Cutline 1.1/images/header_1.jpg" width="770" height="0" alt="Venture Hacks header image 1" title="Venture Hacks header image 1" />
+			</div>
+	<div id="content_box">
+	
+		<div id="content" class="posts">
+<!--
+<div style='padding-top: 1em'>
+<center><iframe src="/highlights" style='border:0; border-top: 3px double #888; border-bottom: 3px double #888; height:26em; width: 43em' scrolling="no" width="450px"></iframe>
+</center>
+</div>
+-->
+<!-- div class="entry" class="highlight">
+<p align="center" class="highlight"><strong>We show you how to negotiate a great deal with investors.</strong><br />Why? <a href="/articles/term-sheet-hacks">Your investors know more than you do</a>.<br />How? <a href="/term-sheet-hacks/">Term Sheet Hacks</a>. <br />Want more? <a href="http://feeds.venturehacks.com/venturehacks">Subscribe to the feed</a>.<br />
+</p></div -->
+
+<table width="550px;" >
+<tr>
+<td width="55%">
+<div class="entry" >
+<p align="center">
+<center>
+<strong>60,000 subscribers and growing.</strong></center>
+<br />
+
+&ldquo;Excellent stuff!&rdquo; &mdash; <em><a href="http://evhead.com/2007/05/venture-hacks-make-new-board-seat-for.asp">Evan Williams</a>, Founder of <a href="http://www.twitter.com/">Twitter</a> and <a href="http://www.blogger.com">Blogger</a></em>
+<br />
+<br />
+&ldquo;A fantastic blog&hellip;&rdquo; &mdash; <em><a href="http://james.hotornot.com/2007/04/great-blog-to-read-if-you-are-thinking.html">James Hong</a>, Founder of <a href="http://www.hotornot.com/">Hot or Not</a></em><br/><a style="float:right;" href="http://venturehacks.com/about#reviews">more reviews&rarr;</a>
+
+<!-- blockquote>
+&ldquo;Much needed.&rdquo; &mdash; <em><a href="/articles/reactions#comment-52">Joe Greenstein</a>, Founder of <a href="http://www.flixster.com/">Flixster</a></em></blockquote -->
+</p><br /></div>
+</td>
+<td width="5%"></td>
+<td>
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 10,
+  interval: 15000,
+  width: 250,
+  height: 100,
+  theme: {
+    shell: {
+      background: '#c9c9c9',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#000000',
+      links: '#0062ff'
+    }
+  },
+  features: {
+    scrollbar: true,
+    loop: true,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: false,
+    behavior: 'default'
+  }
+}).render().setUser('venturehacks').start();
+</script>
+</td></tr>
+</table><br />
+
+		
+										
+			<h2><a href="http://venturehacks.com/articles/scouts" rel="bookmark" title="Permanent Link to AngelList Scouts">AngelList Scouts</a></h2>
+<h4><p style="color:black;padding-bottom:2px;font-family:helvetica;font-style:normal;">by Nivi on August 31st, 2010<br /><!-- nivi &middot; --> <!-- nivi a href="http://venturehacks.com/articles/scouts#comments">1 Comment</a --></h4>
+			<!-- h4>August 31st, 2010</h4 -->
+			<div class="entry">
+				<p>AngelList Scouts find high-quality startups for the angels on <a href="http://angel.co">AngelList</a>. When a Scout tells us to look at a startup, we pay attention.</p>
+<blockquote><p><strong>Update</strong>: <a href="http://gigaom.com/2010/08/31/angellist-designates-scouts-to-refer-new-startup-deals/">Liz Gannes covers this story for GigaOM</a>.</p></blockquote>
+<p>We look at every startup that applies to AngelList — whether or not they have social proof — but a little social proof makes it easier for us to say yes. And the social proof of a Scout is especially interesting to us.</p>
+<p>Why? Because the average Joe usually doesn&#8217;t get anything when he makes intros for a startup. He might get some advisory shares but that&#8217;s rarer thank you think.</p>
+<p><strong>The Scouts program is different</strong>. First, the Scouts are getting AngelList profiles with badges that display how many high-quality startups they&#8217;ve referred to the community. With the startups&#8217; permission, we&#8217;ll list the names of the startups too. And most important: <em>the Scouts will be able to send startups directly to AngelList, under their own names, without us in the middle</em>.</p>
+<p><strong>Who are the Scouts?</strong> Each of these Scouts has sent us one high-quality startup that was good enough for AngelList. And most have sent more.</p>
+<blockquote><p><em>Los Angeles:</em></p></blockquote>
+<blockquote><p><a href="http://jonathangrubb.com/"><img src="http://venturehacks.com/wordpress/wp-content/uploads/2010/01/jonathan_singing_bigger.jpg" alt="" width="73" height="73" /></a> <a href="http://jonathangrubb.com/">J. Grubb</a> (@<a href="http://twitter.com/jonathangrubb">jonathangrubb</a>), Founder of <a href="http://getsatisfaction.com/">Get Satisfaction</a></p>
+<p><em>Seattle:</em></p>
+<p><img src="http://venturehacks.com/wordpress/wp-content/uploads/2010/01/small2_bigger.jpg" alt="" /> <a href="http://www.tonywright.com/">Tony Wright</a> (@<a href="http://twitter.com/webwright">webwright</a>), Founder of <a href="http://www.rescuetime.com/">RescueTime</a></p>
+<p><em>Chicago:</em></p>
+<p><img src="http://venturehacks.com/wordpress/wp-content/uploads/2010/01/harper_2_bigger.jpg" alt="" /> <a href="http://www.nata2.org/">Harper Reed</a> (@<a href="http://twitter.com/harper">harper</a>), Former CTO of <a href="http://www.threadless.com/">Threadless</a></p>
+<p><em>New York:</em></p>
+<p><img src="http://venturehacks.com/wordpress/wp-content/uploads/2010/08/me2_bigger.jpg" alt="" /> <a href="http://caterpillarcowboy.com/">David Lifson</a> (@<a href="http://twitter.com/dlifson">dlifson</a>), CEO of <a href="http://www.postling.com/">Postling</a></p>
+<p><em>Silicon Valley:</em></p>
+<p><img src="http://venturehacks.com/wordpress/wp-content/uploads/2010/01/Picture_36_bigger.png" alt="" /> <a href="http://jamiequint.com/">Jamie Quint</a> (@<a href="http://twitter.com/jamiequint">jamiequint</a>), Founder of Snaptalent</p>
+<p><img src="http://venturehacks.com/wordpress/wp-content/uploads/2010/08/picture_of_me_bigger.jpg" alt="" /> <a href="http://www.udemy.com/u/gaganbiyani/">Gagan Biyani</a> (@<a href="http://twitter.com/gaganbiyani">gaganbiyani</a>), Founder of Udemy</p>
+<p><img src="http://venturehacks.com/wordpress/wp-content/uploads/2010/08/Picture_1_bigger.png" alt="" /> <a href="http://sam.bluwiki.com/blog/">Sam Odio</a> (@<a href="http://twitter.com/sodio">sodio</a>), CEO of <a href="http://www.divvyshot.com/">Divvyshot</a></p>
+<p><img src="http://venturehacks.com/wordpress/wp-content/uploads/2010/08/head_bigger.jpg" alt="" /> <a href="http://jasonputorti.com/">Jason Putorti</a> (@<a href="http://twitter.com/putorti">putorti</a>), <a href="http://mint.com">Mint</a> designer, <a href="http://votizen.com">Votizen</a> advisor</p>
+<p><em>Boston:</em></p>
+<p><img src="http://venturehacks.com/wordpress/wp-content/uploads/2010/01/david_twitterpic_bigger.jpg" alt="" /> <a href="http://davidhauser.com/MINDdrift/">David Hauser</a> (@<a href="http://twitter.com/dh">dh</a>), Founder of <a href="http://www.grasshopper.com/">Grasshopper</a>, <a href="http://chargify.com">Chargify</a></p>
+<p><em>London:</em></p>
+<p><img src="http://venturehacks.com/wordpress/wp-content/uploads/2010/08/P8179352_-_Copy_bigger.JPG" alt="" /> <a href="http://www.cashewman.com/">Brendan Baker</a> (@<a href="http://twitter.com/brendanbaker">brendanbaker</a>), Oxford MBA</p>
+<p>And here&#8217;s a Twitter list of the Scouts: @<a href="http://twitter.com/angellist/scouts">angellist/scouts</a>.
+</p></blockquote>
+<p><strong>How do you get to be a Scout?</strong> Refer one high-quality startup that&#8217;s good enough to share with AngelList (tell startups to list you in the referrer field). Then get in touch with us, tell us you want to be a Scout, and we&#8217;ll start a conversation. I&#8217;m sure we&#8217;ll modify these guidelines over time, but it&#8217;s a good start.</p>
+<p><strong>Questions?</strong> Contact our Scout @<a href="http://twitter.com/brendanbaker">brendanbaker</a> and cc me @<a href="http://twitter.com/nivi">nivi</a>.</p>
+<p>If you&#8217;re a startup that&#8217;s trying to contact the angels on AngelList, consider getting in touch with one of our Scouts. They can help.</p>
+			</div>	
+
+<!-- nivi --><script src="http://feeds.feedburner.com/~s/venturehacks?i=http://venturehacks.com/articles/scouts" type="text/javascript" charset="utf-8"></script>
+
+			<p class="tagged"><span class="add_comment"><a href="http://venturehacks.com/articles/scouts#comments" title="Comment on AngelList Scouts">&rarr; 1 Comment</a></span><strong>Learn more about:</strong> <a href="http://venturehacks.com/topics/angellist" title="View all posts in AngelList" rel="category tag">AngelList</a></p>
+			<div class="clear"></div>
+			
+											
+			<h2><a href="http://venturehacks.com/articles/designer" rel="bookmark" title="Permanent Link to How we&#8217;re recruiting a product designer for AngelList">How we&#8217;re recruiting a product designer for AngelList</a></h2>
+<h4><p style="color:black;padding-bottom:2px;font-family:helvetica;font-style:normal;">by Nivi on August 25th, 2010<br /><!-- nivi &middot; --> <!-- nivi a href="http://venturehacks.com/articles/designer#comments">No Comments</a --></h4>
+			<!-- h4>August 25th, 2010</h4 -->
+			<div class="entry">
+				<p>We&#8217;re recruiting a product designer for <a href="http://angel.co/">AngelList</a>. Here&#8217;s how we&#8217;re doing it and what we&#8217;re learning. (If you&#8217;re interested in working with us, details are at the bottom of this post.)</p>
+<p>I didn&#8217;t start by putting up a job post. I figured if everybody else is doing it, I need to take a different approach. So I called the smartest designers and entrepreneurs I knew and asked them for advice. Here&#8217;s what I&#8217;ve learned:</p>
+<ul>
+<li>We want a <strong>product designer</strong>. This <a href="http://www.quora.com/jobs#design">job post</a> from Quora defines a product designer as “Extraordinary product, interaction, and visual design talent [with] a curiosity and passion for crafting amazing experiences.&#8221; Product design encompasses visual design, interaction design, branding… it&#8217;s the whole user experience.</li>
+<li>A small team like ours should hire designers who can <strong>build what they design</strong>. At a minimum, that means building HTML, CSS, perhaps JS, perhaps beyond. See these posts by <a href="http://www.quora.com/Should-user-interface-designers-be-able-to-build-what-they-design/answer/Jason-Putorti">Jason Putorti</a> and <a href="http://www.quora.com/Should-user-interface-designers-be-able-to-build-what-they-design/answer/rcox">Rebekah Cox</a> for more info. Also read Rebekah&#8217;s <a href="http://www.artypapers.com/ap.log/thread.php?346">Early Quora Design Notes</a>.</li>
+<li>Quora has the best <a href="http://www.quora.com/jobs">job postings</a> I&#8217;ve seen in a long time — they&#8217;re muscular and much better than all the quirky job postings in the world.</li>
+<li>Consultants are good if you want to build the product. Full-time people are good if you want to build the team. <em>We want to build the team.</em></li>
+</ul>
+<h3>The opportunity for product designers</h3>
+<p><a href="http://angel.co">AngelList</a> is a <em>community of angel investors</em> who make it fast and easy for worthy startups to raise money. These links tell the story better than we ever could:</p>
+<blockquote><p><a href="http://www.quora.com/What-do-people-think-of-AngelList">What do people think of AngelList?<br />
+</a><a href="http://twitter.com/angellist/favorites">AngelList Twitter Favorites</a><br />
+<a href="http://www.avc.com/a_vc/2010/07/the-angellist.html">Fred Wilson covers AngelList</a></p></blockquote>
+<p>In short, the 250+ angels on AngelList are bringing startup funding online — in fact, they&#8217;ve already funded about 40 startups (<a href="http://www.quora.com/What-startups-have-been-funded-via-AngelList">here&#8217;s a few of them</a>). This is a very high-impact and difficult problem… and a giant opportunity to <em>help the industry that funds the startups we know and love:</em> Facebook, Google, Twitter, Apple, you name it.</p>
+<p><strong>What&#8217;s in it for you?</strong> Investors throughout Silicon Valley and the world will use your product daily. You get to lead the product and company by turning vision into product, with no managers in your way. Your title will be the same as everyone else on the team: Venture Hacker. You&#8217;ll work with a founding <a href="http://venturehacks.com/about">team</a> of investors (Twitter), founders (Epinions), students (life), and advisors (billions served). And you get to push the envelope of what is possible with product design on the Web.</p>
+<p>We&#8217;re committed to building a high-impact and long-lasting team. If you&#8217;re a product designer who&#8217;s <strong>irrationally interested</strong> in this problem and wants to work with us full-time in San Francisco, <a href="mailto:nivi@venturehacks.com">send us a few links</a> (we don&#8217;t need/want anything else), and please let us know if you have any questions.</p>
+			</div>	
+
+<!-- nivi --><script src="http://feeds.feedburner.com/~s/venturehacks?i=http://venturehacks.com/articles/designer" type="text/javascript" charset="utf-8"></script>
+
+			<p class="tagged"><span class="add_comment"><a href="http://venturehacks.com/articles/designer#respond" title="Comment on How we&#8217;re recruiting a product designer for AngelList">&rarr; No Comments</a></span><strong>Learn more about:</strong> <a href="http://venturehacks.com/topics/administrivia" title="View all posts in Administrivia" rel="category tag">Administrivia</a></p>
+			<div class="clear"></div>
+			
+											
+			<h2><a href="http://venturehacks.com/articles/xconomy" rel="bookmark" title="Permanent Link to Xconomy covers AngelList">Xconomy covers AngelList</a></h2>
+<h4><p style="color:black;padding-bottom:2px;font-family:helvetica;font-style:normal;">by Nivi on August 20th, 2010<br /><!-- nivi &middot; --> <!-- nivi a href="http://venturehacks.com/articles/xconomy#comments">No Comments</a --></h4>
+			<!-- h4>August 20th, 2010</h4 -->
+			<div class="entry">
+				<p><img class="right" src="http://venturehacks.com/wordpress/wp-content/uploads/2010/08/xconomy.gif" alt="" />This Xconomy article by <a href="http://twitter.com/wroush">Wade Roush</a> does a great job of telling the AngelList and Venture Hacks story:</p>
+<blockquote><p><a href="http://www.xconomy.com/san-francisco/2010/08/20/in-seed-funding-race-angellist-sorts-the-junk-from-the-maybes/?single_page=true">In Seed Funding Race, AngelList Sorts the “Junk” from the “Maybes”</a></p></blockquote>
+<p>I hesitated to link to it because these articles always make you look more handsome than you really are. But Wade does a great job of rounding up the state of the art of angel investing and placing AngelList in that context. Here&#8217;s a choice quote:</p>
+<blockquote><p>“I think the way to get into angel investing is, first, you obviously have to have money; you have to have a brand, otherwise you are not going to be differentiated and you are not going to see good deals; and you have to have a network of angels to work with, so you can move in packs and find other people to help you with due diligence,” Ravikant says.</p>
+<p>It’s only then that AngelList can help. “The final thing is that you need to have good deal flow, so that you can see when the good things come along,” Ravikant says. “We will bring you deal flow, make it easy to syndicate deals, and we’ll show you deals that hopefully over time matches up to your interests.”</p></blockquote>
+<p>Check out the rest of the thoughtful <a href="http://www.xconomy.com/san-francisco/2010/08/20/in-seed-funding-race-angellist-sorts-the-junk-from-the-maybes/?single_page=true">article</a>.</p>
+			</div>	
+
+<!-- nivi --><script src="http://feeds.feedburner.com/~s/venturehacks?i=http://venturehacks.com/articles/xconomy" type="text/javascript" charset="utf-8"></script>
+
+			<p class="tagged"><span class="add_comment"><a href="http://venturehacks.com/articles/xconomy#respond" title="Comment on Xconomy covers AngelList">&rarr; No Comments</a></span><strong>Learn more about:</strong> <a href="http://venturehacks.com/topics/angellist" title="View all posts in AngelList" rel="category tag">AngelList</a></p>
+			<div class="clear"></div>
+			
+											
+			<h2><a href="http://venturehacks.com/articles/quora-marketing" rel="bookmark" title="Permanent Link to Quora Marketing">Quora Marketing</a></h2>
+<h4><p style="color:black;padding-bottom:2px;font-family:helvetica;font-style:normal;">by Nivi on August 19th, 2010<br /><!-- nivi &middot; --> <!-- nivi a href="http://venturehacks.com/articles/quora-marketing#comments">4 Comments</a --></h4>
+			<!-- h4>August 19th, 2010</h4 -->
+			<div class="entry">
+				<p><a href="http://quora.com"><img class="right" src="http://venturehacks.com/wordpress/wp-content/uploads/2010/08/quora-picture.png" alt="" width="150" /></a><a href="http://www.quora.com/">Quora</a> is a Q&amp;A site. We were planning on posting a question asking startups and angels to share their <a href="http://angel.co">AngelList</a> experience. But someone beat us to it:</p>
+<blockquote><p><a href="http://www.quora.com/What-do-people-think-of-AngelList?">What do people think of AngelList?</a></p></blockquote>
+<p>I can&#8217;t think of a better piece of marketing than this thread. There&#8217;s nothing we could say better. I want to replace the AngelList homepage with this thread.</p>
+<h3>Quora spam</h3>
+<p><a href="http://www.quora.com/about">Quora&#8217;s goal</a> is &#8220;to have each question page become the best possible resource for someone who wants to know about the question.&#8221;</p>
+<p>The Quora community will kill you if you fill it with rubbish. You have to have a lot of very happy users to try Quora marketing. And you have to expect negative reviews too. Quora&#8217;s looking for the best answer — not your answer.</p>
+<h3>Hating Quora</h3>
+<p>I&#8217;ve resisted Quora since they were in closed beta. Partly because everyone was raving about it. Partly because I thought the user experience was insane.</p>
+<p>Now I&#8217;m hooked. And I think they&#8217;ve created a new class of user experience.  It&#8217;s a &#8220;go with the flow&#8221; experience. Don&#8217;t try to load a model of the site in your head — it&#8217;s too complicated and they&#8217;re constantly <a href="http://www.quora.com/Is-Quora-going-to-do-significant-redesigns-like-Facebook-has-done">redesigning</a> it. Just expect things to be there when you need them. And expect that you can do a lot with each piece of data on the site (suggest revisions, revise it, revert it, vote on it, eat it, thank the author…).</p>
+<p>Quora&#8217;s a lot like <a href="http://www.google.com/search?sourceid=chrome&amp;ie=UTF-8&amp;q=the+wire">The Wire</a>, you&#8217;ll hate the first 5 episodes — then something will happen in your head and you won&#8217;t be able to shut up about it. Follow <a href="http://www.quora.com/babak-nivi">me</a> and <a href="http://www.quora.com/Naval-Ravikant">Naval</a> on Quora and check out the <a href="http://www.quora.com/What-do-people-think-of-AngelList?">AngelList thread</a> already.</p>
+			</div>	
+
+<!-- nivi --><script src="http://feeds.feedburner.com/~s/venturehacks?i=http://venturehacks.com/articles/quora-marketing" type="text/javascript" charset="utf-8"></script>
+
+			<p class="tagged"><span class="add_comment"><a href="http://venturehacks.com/articles/quora-marketing#comments" title="Comment on Quora Marketing">&rarr; 4 Comments</a></span><strong>Learn more about:</strong> <a href="http://venturehacks.com/topics/angellist" title="View all posts in AngelList" rel="category tag">AngelList</a></p>
+			<div class="clear"></div>
+			
+											
+			<h2><a href="http://venturehacks.com/articles/angel-tips" rel="bookmark" title="Permanent Link to 7 angel investing tips in 7 minutes">7 angel investing tips in 7 minutes</a></h2>
+<h4><p style="color:black;padding-bottom:2px;font-family:helvetica;font-style:normal;">by Nivi on August 3rd, 2010<br /><!-- nivi &middot; --> <!-- nivi a href="http://venturehacks.com/articles/angel-tips#comments">5 Comments</a --></h4>
+			<!-- h4>August 3rd, 2010</h4 -->
+			<div class="entry">
+				<p>Last week, Naval and a slew of angels shared their investing advice with an audience of angels-in-training at <a href="http://angelconf.org/">AngelConf 2010</a>. Here&#8217;s the video (each talk is 7 minutes long):</p>
+<p><center><object id="clip_embed_player_flash" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="400" height="300" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="bgcolor" value="#000000" /><param name="allowScriptAccess" value="always" /><param name="allowNetworking" value="all" /><param name="allowFullScreen" value="true" /><param name="flashvars" value="auto_play=false&amp;start_volume=25&amp;title=AngelConf 2010 Jul 29 2010 at 3:25PM PDT&amp;channel=ycombinator&amp;archive_id=267536844" /><param name="src" value="http://www.justin.tv/widgets/archive_embed_player.swf" /><param name="allowfullscreen" value="true" /><embed id="clip_embed_player_flash" type="application/x-shockwave-flash" width="400" height="300" src="http://www.justin.tv/widgets/archive_embed_player.swf" flashvars="auto_play=false&amp;start_volume=25&amp;title=AngelConf 2010 Jul 29 2010 at 3:25PM PDT&amp;channel=ycombinator&amp;archive_id=267536844" allowfullscreen="true" allownetworking="all" allowscriptaccess="always" bgcolor="#000000"></embed></object><br />
+<em>Video: <a href="http://www.justin.tv/b/ycombinator/b/267536844">AngelConf 2010</a><br />
+</em><br />
+</center></p>
+<p>Wade Roush at Xconomy took detailed notes on all the talks and published them <a href="http://www.xconomy.com/san-francisco/2010/08/02/lessons-for-budding-angel-investors-from-y-combinators-angelconf-part-1/">here</a> and <a href="http://www.xconomy.com/san-francisco/2010/08/03/lessons-for-budding-angel-investors-from-y-combinators-angelconf-part-2/">here</a>.</p>
+<h3>7 angel investing tips</h3>
+<p>Naval&#8217;s 7-minute talk starts at 26:00. Here are Wade&#8217;s <a href="http://www.xconomy.com/san-francisco/2010/08/03/lessons-for-budding-angel-investors-from-y-combinators-angelconf-part-2/">detailed notes</a>:</p>
+<blockquote><p>&#8220;1. Don’t move in a herd, but do be a pack animal. Not everybody has all the information. One angle might know the market, one might know the founder, one might know the customer base. Every time an angel comes into a round, they bring a piece of information. Ride on their coattails.</p>
+<p>2. Say no early and often. You should be doing one deal for every 20 to 30 that you see. If you do more than that, you’re overinvesting.</p>
+<p>3. You need to have a brand. The really great deals are obvious, and everybody wants in, and if you want to get in you need a brand. That could be that you have been successful with great companies in the past. <strong>And</strong> <strong>building a brand does not mean taking coffee meetings. Shallow connections do not mean much. If you have a fancy office on Sand Hill Road or Market Street, the best deals are not going to come to you. If you’re not out there running around getting to know people, then you are really just practicing the VC model.</strong></p>
+<p>4. Humility. When you’re sitting there all day and people are asking for money and more often than not you are saying no, it eventually goes to your head. The problem is that when a Mark Zuckerberg walks in, those guys have more offers than they have room for. If you come across as arrogant, they will drop you.</p>
+<p>5. Your job is to be a little dispassionate. Don’t try to run the company. Don’t even take the power—if you don’t have it, you won’t be tempted to use it.</p>
+<p>6. Filters. Every winner is unique by definition, because what they’re doing is new. But the losers tend to cluster around common mistakes, such as investing in a company with one founder. You will find you can establish filters, even one as simple as “Do what you love.”</p>
+<p>7. There are many paths to success. You have to be very careful about taking your limited experience and trying to shoehorn your companies into it.&#8221;</p></blockquote>
+<p>I haven&#8217;t watched all the angels yet but I&#8217;m making a mental note to watch it while I brush my teeth tomorrow morning.</p>
+<h3>7-minute abs</h3>
+<p>If you&#8217;re not an angel investor, watch this instead:</p>
+<p><center><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="450" height="273" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/h9mioHO4hoM&amp;hl=en_US&amp;fs=1?rel=0" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="450" height="273" src="http://www.youtube.com/v/h9mioHO4hoM&amp;hl=en_US&amp;fs=1?rel=0" allowscriptaccess="always" allowfullscreen="true"></embed></object><br />
+<em>Video: <a href="http://www.youtube.com/watch?v=h9mioHO4hoM">7-Minute Abs</a></em></center></p>
+			</div>	
+
+<!-- nivi --><script src="http://feeds.feedburner.com/~s/venturehacks?i=http://venturehacks.com/articles/angel-tips" type="text/javascript" charset="utf-8"></script>
+
+			<p class="tagged"><span class="add_comment"><a href="http://venturehacks.com/articles/angel-tips#comments" title="Comment on 7 angel investing tips in 7 minutes">&rarr; 5 Comments</a></span><strong>Learn more about:</strong> <a href="http://venturehacks.com/topics/angels" title="View all posts in Angels" rel="category tag">Angels</a> &middot;  <a href="http://venturehacks.com/topics/conferences" title="View all posts in Conferences" rel="category tag">Conferences</a></p>
+			<div class="clear"></div>
+			
+											
+			<h2><a href="http://venturehacks.com/articles/tracking-testimonials" rel="bookmark" title="Permanent Link to Tracking testimonials — the lazy way">Tracking testimonials — the lazy way</a></h2>
+<h4><p style="color:black;padding-bottom:2px;font-family:helvetica;font-style:normal;">by Nivi on August 1st, 2010<br /><!-- nivi &middot; --> <!-- nivi a href="http://venturehacks.com/articles/tracking-testimonials#comments">5 Comments</a --></h4>
+			<!-- h4>August 1st, 2010</h4 -->
+			<div class="entry">
+				<p>I use Twitter favorites to keep track of AngelList testimonials. I just favorite the testimonials I like. It&#8217;s super easy:</p>
+<p style="text-align: center;"><a href="http://twitter.com/rabois/status/20036470692"><img class="aligncenter" src="http://venturehacks.com/wordpress/wp-content/uploads/2010/08/karbois-testimonial.png" alt="" width="450" /></a></p>
+<p>And it&#8217;s trivial to embed them anywhere:<br />
+<script src="http://widgets.twimg.com/j/2/widget.js"></script> <script type="text/javascript">// <![CDATA[
+   new TWTR.Widget({   version: 2,   type: 'faves',   rpp: 20,   interval: 6000,   title: '',   subject: 'AngelList Testimonials',   width: 250,   height: 300,   theme: {     shell: {       background: '#444444',       color: '#ffffff'     },     tweets: {       background: '#ffffff',       color: '#444444',       links: '#4070c2'     }   },   features: {     scrollbar: true,     loop: false,     live: true,     hashtags: true,     timestamp: true,     avatars: true,     behavior: 'all'   } }).render().setUser('angellist').start();
+// ]]&gt;</script><br />
+<em>Widget: <a href="http://twitter.com/angellist/favorites">AngelList Favorites</a><br />
+</em></p>
+<h3>Not every testimonial is a tweet</h3>
+<p>You can track a non-tweet testimonial by linking to it on Twitter and then favoriting it. Or by bookmarking it on del.icio.us — I use the <a href="http://delicious.com/nivi/testimonial">testimonial tag</a>.</p>
+<p>If you go to my <a href="http://delicious.com/nivi/testimonial">testimonial tag</a> on del.icio.us, you&#8217;ll see I&#8217;ve also bookmarked private Gmail conversations. Gmail lets you link to threads — although you have to be logged in to see them.</p>
+<p>I pull up these testimonials when I&#8217;m telling people about AngelList. There&#8217;s a story behind each tweet and it&#8217;s a fun way to start the conversation.</p>
+			</div>	
+
+<!-- nivi --><script src="http://feeds.feedburner.com/~s/venturehacks?i=http://venturehacks.com/articles/tracking-testimonials" type="text/javascript" charset="utf-8"></script>
+
+			<p class="tagged"><span class="add_comment"><a href="http://venturehacks.com/articles/tracking-testimonials#comments" title="Comment on Tracking testimonials — the lazy way">&rarr; 5 Comments</a></span><strong>Learn more about:</strong> <a href="http://venturehacks.com/topics/angellist" title="View all posts in AngelList" rel="category tag">AngelList</a></p>
+			<div class="clear"></div>
+			
+											
+			<h2><a href="http://venturehacks.com/articles/no-lead" rel="bookmark" title="Permanent Link to How to raise money with no lead">How to raise money with no lead</a></h2>
+<h4><p style="color:black;padding-bottom:2px;font-family:helvetica;font-style:normal;">by Nivi on July 31st, 2010<br /><!-- nivi &middot; --> <!-- nivi a href="http://venturehacks.com/articles/no-lead#comments">9 Comments</a --></h4>
+			<!-- h4>July 31st, 2010</h4 -->
+			<div class="entry">
+				<p>Paul Graham <a href="http://gigaom.com/2010/07/29/how-y-combinator-is-remaking-silicon-valley-in-its-image/">says</a> “The future [of funding] is no fixed amount, no fixed closing date, and no lead.” In other words, the future of financing is <em>continuous</em>, not <em>discrete</em>.</p>
+<p>This post explains how to raise a seed round with no lead, no fixed amount, and a fluid closing date. The process is called mass syndication, or a <a href="http://blog.rafaelcorrales.com/2010/05/mass-syndication-is-party-round.html">party round</a>.</p>
+<p>Paul proposes eliminating rounds altogether, but we&#8217;re not there yet. Mass syndication is a single continuous seed round and I think it&#8217;s the state of the art in continuous fundraising.</p>
+<p>We originally offered this interview exclusively to <a href="http://angel.co">AngelList</a> applicants — now it&#8217;s available to everyone.</p>
+<h3 style="font-size: 1.17em;">Another future</h3>
+<p>The future of funding is also finding the <em>right</em> investors for your startup, <em>quickly. </em>Not just picking from the investors you can get introductions to.</p>
+<p>How? You want to get instant meetings with any investor you want. And you only want to meet investors who are <em>genuinely</em> interested in your startup. That&#8217;s what <a href="http://angel.co">AngelList</a> is for. One danger of this approach is that your round is <em>oversubscribed</em>.</p>
+<p>Despite the name, you can use AngelList to request intros to any subset of investors on the list — you don&#8217;t need to send it to the whole list.</p>
+<h3>Leads aren&#8217;t going away</h3>
+<p>Fred Wilson <a href="http://www.avc.com/a_vc/2010/07/lead-investors-dipshit-companies-and-funding-every-entrepreneur.html">writes</a> &#8220;If you don&#8217;t want a lead investor, then don&#8217;t knock on my door because I don&#8217;t know any other way to be.&#8221;</p>
+<p>This interview explains how to raise a seed round with the conservative assumption that a lead won&#8217;t step forward — but it doesn&#8217;t preclude you from changing course if a lead appears.</p>
+<h3>1. Interview</h3>
+<div id="__ss_3473004" style="width: 425px;"><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="425" height="355" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowScriptAccess" value="always" /><param name="src" value="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=howtocloseanangelround-100318192519-phpapp02&amp;rel=0&amp;stripped_title=how-to-close-an-angel-round" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="425" height="355" src="http://static.slidesharecdn.com/swf/ssplayer2.swf?doc=howtocloseanangelround-100318192519-phpapp02&amp;rel=0&amp;stripped_title=how-to-close-an-angel-round" allowscriptaccess="always" allowfullscreen="true"></embed></object></div>
+<p>Video: <a href="http://venturehacks.com/wordpress/wp-content/uploads/2010/03/How-to-close-an-angel-round.m4a">Interview  with chapters</a> (for iPod, iPhone, iTunes)<br />
+Audio: <a href="http://venturehacks.com/wordpress/wp-content/uploads/2010/03/How-to-close-an-angel-round.mp3">Interview  without chapters</a> (MP3, works anywhere)<br />
+Transcript: Below</p>
+<h3>2. Outline</h3>
+<p>Here’s an outline and transcript:</p>
+<ol>
+<li>You can close an angel round with &#8216;mass      syndication&#8217;</li>
+<li>Start with terms and valuation below market</li>
+<li>What you want in your term sheet</li>
+<li>What you don&#8217;t want in your term sheet</li>
+<li>Should you have a board seat for seed      investors?</li>
+<li>This isn&#8217;t comprehensive term sheet advice</li>
+<li>Memorize the term sheet before your first      meeting</li>
+<li>How do you set your valuation? Price it to      move</li>
+<li>How do you bring up the terms in a meeting?</li>
+<li>Describe how the terms are investor-friendly</li>
+<li>A preferred round is a good way to set up      good initial terms</li>
+<li>Does a small seed round need protective      provisions? Pros and cons.</li>
+<li>Get feedback on the terms in the first      meeting</li>
+<li>Drop names to build social proof</li>
+<li>Social proof works differently in a Series A      round with VCs</li>
+<li>See if the &#8220;interest&#8221; includes a dollar      amount, intros, and name-dropping (a.k.a.      soft circled)</li>
+<li>When do you need a lead?</li>
+<li>Approach the financing as if you won’t find a      lead</li>
+<li>What&#8217;s a lead investor?</li>
+<li>If they say &#8220;find a lead,&#8221; ask why</li>
+<li>How to create a deadline</li>
+<li>Raise the money when you don&#8217;t need it</li>
+<li>Send two emails to the angels</li>
+<li>Do a rolling close: the cash comes in just-        in-time</li>
+<li>Mass syndication can fail if a very high        social proof investor drops out</li>
+<li>Use AngelList and StartupList to get intros        to angels</li>
+<li>What do angels look for?</li>
+<li>Advisors are good for getting your foot in        the door, not in a pitch</li>
+<li>Get advisors by going to events or talking to      entrepreneurs</li>
+<li>Before you raise a seed round, you need a      product in the marketplace</li>
+<li>Use customer development and lean startup      techniques to get to market with less</li>
+<li>Pitching hacks free chapter: Advice on getting investor intros</li>
+<li>If you need money to get something in the      marketplace, pitch idea investors</li>
+<li>Pitch incubators or do your startup on the side</li>
+<li>What are the different types of seed stage      investors?</li>
+<li>If you&#8217;re talking to a VC, make sure they      really do seed stage rounds</li>
+<li>Potential concerns with pitching multi-stage      and seed-stage firms</li>
+<li>Get intros to seed investors with AngelList/StartupList</li>
+</ol>
+<p><span> </span></p>
+<h3>3. Transcript</h3>
+<p><em>Music: <a href="http://www.google.com/search?hl=en&amp;q=squarepusher&amp;aq=f&amp;oq=">Squarepusher</a></em></p>
+<p><strong>Nivi</strong>:  Hi there, this is Nivi from Venture Hacks.</p>
+<p><strong>Naval</strong>:  And Naval from Venture Hacks.</p>
+<p><strong>Niv</strong>i:  And we&#8217;re going to talk about how to close an angel round, how to put together an angel round, or in other words, how to herd a motley crew of angel investors and turn those meetings that you&#8217;re getting into money in the bank.</p>
+<p>I think we&#8217;re going to start off by talking about mass syndication, which is an approach that I think more entrepreneurs should be taking to close their angel rounds.</p>
+<h3><strong>You can close an angel round with &#8216;mass      syndication&#8217;</strong></h3>
+<p><strong>Nivi: </strong>I think entrepreneurs make two typical mistakes when they&#8217;re doing an angel round, and they come from what they&#8217;ve read online about how to close a VC round. So, there are two things.</p>
+<p>One: they don&#8217;t name drop enough. They don&#8217;t mention who else is interested.</p>
+<p>Two: and I guess more importantly, they&#8217;re looking for a lead, which you don&#8217;t necessarily need in an angel round.</p>
+<p>When you put those two together and combine them with a term sheet that you essentially write yourself, you&#8217;ve got a new way to close an angel round which we call mass syndication, which I&#8217;ve done personally. And Naval, maybe you can talk about how often you see that happening, or if you don&#8217;t see that happening, or whatever.</p>
+<p><strong>Naval</strong>:  It happens fairly often these days. Especially the Y Combinator companies, which are well trained by Paul Graham and crew, will exercise mass syndication a lot. So, they take the standard term sheet that they&#8217;ve been given and they go out and do a rolling close of various convertible notes. And it generally works pretty well.</p>
+<p>The keys are that you have to set the terms and the valuation very, very reasonably. In fact, you have to probably price slightly below market, because otherwise the angels don&#8217;t trust you, then they want a lead who&#8217;s done the due diligence. You have to work with people that you have warm intros with, you have to name drop like crazy, and you have to create forcing functions to get the round to close. You can&#8217;t give people all the time in the world.<br />
+ <a href="http://venturehacks.com/articles/no-lead#more-7345" class="more-link">Read more&rarr;</a></p>
+			</div>	
+
+<!-- nivi --><script src="http://feeds.feedburner.com/~s/venturehacks?i=http://venturehacks.com/articles/no-lead" type="text/javascript" charset="utf-8"></script>
+
+			<p class="tagged"><span class="add_comment"><a href="http://venturehacks.com/articles/no-lead#comments" title="Comment on How to raise money with no lead">&rarr; 9 Comments</a></span><strong>Learn more about:</strong> <a href="http://venturehacks.com/topics/angels" title="View all posts in Angels" rel="category tag">Angels</a> &middot;  <a href="http://venturehacks.com/topics/interview" title="View all posts in Interview" rel="category tag">Interview</a></p>
+			<div class="clear"></div>
+			
+											
+			<h2><a href="http://venturehacks.com/articles/learnboost-angellist" rel="bookmark" title="Permanent Link to LearnBoost raises money with AngelList">LearnBoost raises money with AngelList</a></h2>
+<h4><p style="color:black;padding-bottom:2px;font-family:helvetica;font-style:normal;">by Nivi on July 28th, 2010<br /><!-- nivi &middot; --> <!-- nivi a href="http://venturehacks.com/articles/learnboost-angellist#comments">2 Comments</a --></h4>
+			<!-- h4>July 28th, 2010</h4 -->
+			<div class="entry">
+				<p><a href="http://www.learnboost.com/"><img class="right" src="http://venturehacks.com/wordpress/wp-content/uploads/2010/07/LearnBoost_Logo_v3.png" alt="" width="200" /></a>Today we&#8217;re announcing that <a href="http://www.learnboost.com/">LearnBoost</a> has raised money with <a href="http://angel.co">AngelList</a>.  LearnBoost makes an &#8220;easy-to-use online <a href="http://www.learnboost.com/">gradebook</a> for teachers.&#8221;</p>
+<p>LearnBoost was referred to us by two-time <a href="http://venturehacks.com/power-brokers">Power Broker</a> <a href="http://twitter.com/harper">Harper Reed</a>. They used AngelList to contact <a href="http://angel.co/georgezachary">George Zachary</a> and <a href="http://angel.co/jfagnan">Jeff Fagnan</a> who invested:</p>
+<blockquote>
+<table border="0">
+<tbody>
+<tr>
+<td><a href="http://angel.co/georgezachary"><img class="left" src="http://a1.twimg.com/profile_images/367338980/georgehead_bigger.jpg" alt="" width="73" height="73" /></a><a href="http://angel.co/georgezachary">George Zachary</a> (Investor in Twitter)</td>
+</tr>
+<tr>
+<td><a href="http://angel.co/jfagnan"><img class="left" src="http://venturehacks.com/wordpress/wp-content/uploads/2008/06/jeff-fagnan.jpg" alt="" width="73" height="73" /></a><a href="http://angel.co/jfagnan">Jeff Fagnan</a> (Investor in Songbird)</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>George then introduced LearnBoost to AngelList members <a href="http://angel.co/westcoastbill">Bill Lee</a>, <a href="http://angel.co/jhong">James Hong</a>, and <a href="http://angel.co/othman">Othman Laraki</a> who also invested:</p>
+<blockquote>
+<table border="0">
+<tbody>
+<tr>
+<td><a href="http://angel.co/westcoastbill"><img class="left" src="http://venturehacks.com/wordpress/wp-content/uploads/2009/11/bill_sarah_jeff_oscar.jpg" alt="" width="73" height="73" /></a><a href="http://angel.co/westcoastbill">Bill Lee</a> (Investor in Tesla Motors)</td>
+</tr>
+<tr>
+<td><a href="http://angel.co/jhong"><img class="left" src="http://venturehacks.com/wordpress/wp-content/uploads/2009/11/jhong_bigger.jpg" alt="" width="73" height="73" /></a><a href="http://angel.co/jhong">James Hong</a> (Investor in Slide)</td>
+</tr>
+<tr>
+<td><a href="http://angel.co/othman"><img class="left" src="http://geoapi.com/images/othman.jpg" alt="" width="73" height="73" /></a><a href="http://angel.co/othman">Othman Laraki</a> (Founder of Mixer Labs)</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>Finally, here&#8217;s a few of the investors who sourced LearnBoost without AngelList and invested:</p>
+<blockquote>
+<table border="0">
+<tbody>
+<tr>
+<td><a href="http://www.rre.com/"><img class="left" src="http://venturehacks.com/wordpress/wp-content/uploads/2010/07/rre.jpg" alt="" width="73" /></a><a href="http://www.rre.com/">RRE</a> (Investor in Venmo)</td>
+</tr>
+<tr>
+<td><a href="http://www.bvp.com/"><img class="left" src="http://venturehacks.com/wordpress/wp-content/uploads/2010/07/Henry_Bessemer.jpg" alt="" width="73" /></a><a href="http://www.bvp.com/">Bessemer</a> (Investor in Postini)</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p><strong>Update</strong>: Read more about LearnBoost&#8217;s fundraising experience on the <a href="http://www.learnboost.com/learnboost-experience-raising-a-seed-round/">LearnBoost blog</a>.</p>
+<h3>About LearnBoost</h3>
+<p>What is <a href="http://learnboost.com">LearnBoost</a>? In their own words,</p>
+<blockquote><p>&#8220;Our Teacher Gradebook is the best gradebook software on the web.</p>
+<p>&#8220;Beautiful design and wonderful user experience makes you wonder why you&#8217;ve been using other gradebooks. Plus we&#8217;re free. Your new found productivity means you can spend more time doing what you do best: teach.&#8221;</p></blockquote>
+<p><strong>Update 2</strong>: Learn more about LearnBoost in this detailed Xconomy profile: <a href="http://www.xconomy.com/san-francisco/2010/07/28/learnboost-bets-on-better-tools-for-teachers/">LearnBoost Bets on Better Tools for Teachers</a>.</p>
+<blockquote><p><em>Startups:</em> <a href="http://venturehacks.com/startuplist">Get intros to AngelList here</a>.<br />
+<em>Angels</em><em>:</em> <a href="http://angel.co/apply">Join AngelList here</a>.<br />
+<em>Everyone:</em> Get AngelList updates via <a href="http://twitter.com/angellist">Twitter</a> and <a href="http://feeds.venturehacks.com/angellist">RSS</a>.</p></blockquote>
+			</div>	
+
+<!-- nivi --><script src="http://feeds.feedburner.com/~s/venturehacks?i=http://venturehacks.com/articles/learnboost-angellist" type="text/javascript" charset="utf-8"></script>
+
+			<p class="tagged"><span class="add_comment"><a href="http://venturehacks.com/articles/learnboost-angellist#comments" title="Comment on LearnBoost raises money with AngelList">&rarr; 2 Comments</a></span><strong>Learn more about:</strong> <a href="http://venturehacks.com/topics/angellist" title="View all posts in AngelList" rel="category tag">AngelList</a></p>
+			<div class="clear"></div>
+			
+											
+			<h2><a href="http://venturehacks.com/articles/thumbtack-angellist" rel="bookmark" title="Permanent Link to Thumbtack raises money with AngelList">Thumbtack raises money with AngelList</a></h2>
+<h4><p style="color:black;padding-bottom:2px;font-family:helvetica;font-style:normal;">by Nivi on July 27th, 2010<br /><!-- nivi &middot; --> <!-- nivi a href="http://venturehacks.com/articles/thumbtack-angellist#comments">2 Comments</a --></h4>
+			<!-- h4>July 27th, 2010</h4 -->
+			<div class="entry">
+				<p><a href="http://www.thumbtack.com/"><img class="right" src="http://venturehacks.com/wordpress/wp-content/uploads/2010/07/logo_thumbtack_2.png" alt="" width="200" /></a>Today we&#8217;re announcing that <a href="http://www.thumbtack.com/">Thumbtack</a> has raised money with <a href="http://angel.co">AngelList</a>.  Thumbtack is &#8220;your marketplace for local services.&#8221;</p>
+<p>Thumbtack got their first commitments at <a href="http://openangelforum.com/">Open Angel Forum</a>, from <a href="http://angel.co/joshu">Joshua Schachter</a>, <a href="http://angel.co/cyantist">Cyan &amp; Scott Banister</a>, and <a href="http://angel.co/jason">Jason Calacanis</a>. Then they used AngelList to contact <a href="http://angel.co/ariel">Ariel Poler</a> and <a href="http://angel.co/auren">Auren Hoffman</a> who invested:</p>
+<blockquote>
+<table border="0">
+<tbody>
+<tr>
+<td><a href="http://angel.co/ariel"><img class="left" src="http://venturehacks.com/wordpress/wp-content/uploads/2010/07/ariel-poler.jpg" alt="" width="73" height="73" /></a><a href="http://angel.co/ariel">Ariel Poler</a> (Investor in AdMob)</td>
+</tr>
+<tr>
+<td><a href="http://angel.co/auren"><img class="left" src="http://venturehacks.com/wordpress/wp-content/uploads/2009/11/auren.jpg" alt="" width="73" height="73" /></a><a href="http://angel.co/auren">Auren Hoffman</a> (Investor in Aardvark)</td>
+</tr>
+</tbody>
+</table>
+</blockquote>
+<p>Thumbtack&#8217;s CEO, <a href="http://twitter.com/MLZ">Marco Zappacosta</a>, sent me this very nice email about his AngelList experience:</p>
+<blockquote><p>&#8220;Both Ariel Poler and Auren Hoffman came from AngelList. And Auren introduced me to Scott Fabor and Mark Britto who are also now investing. <a href="http://angel.co/joshu">Joshua Schachter</a> &amp; <a href="http://angel.co/jason">Jason Calacanis</a> are also on the list but I was first introduced to them through Jason&#8217;s Open Angel Forum.</p>
+<p>&#8220;The value of AngelList goes beyond the money, though &#8212; the introductions have been killer, even when they didn&#8217;t net a check. I got to meet with <a href="http://angel.co/rabois">Keith Rabois</a>, <a href="http://www.sequoiacap.com/us/bryan-schreier">Bryan Schreier</a>, <a href="http://angel.co/m2jr">Floodgate</a>, <a href="http://angel.co/joshk">First Round</a>, <a href="http://angel.co/jeremyl">Jeremy Levine</a>, and others: relationships that I would not have been able to initiate without you guys.&#8221;</p></blockquote>
+<p>Read more about Marco&#8217;s fundraising experience on the <a href="http://www.thumbtack.com/blog/?p=120">Thumbtack blog</a>.</p>
+<h3>About Thumbtack</h3>
+<p>What is <a href="http://www.thumbtack.com/">Thumbtack</a>? In their own words,</p>
+<blockquote><p>&#8220;Why can you go online right now and buy any product you want but you can&#8217;t do the same for tutors, handymen, dog walkers, or other local services? Thumbtack is changing that.</p>
+<p>&#8220;Thumbtack isn&#8217;t like typical local search directories that simply return business listings with ratings and reviews, leaving you no better off than the paper Yellow Pages.</p>
+<p>&#8220;Instead, Thumbtack gives you the ability to vet, contact and book service professionals the moment you find them.&#8221;</p></blockquote>
+<p><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="450" height="273" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><param name="src" value="http://www.youtube.com/v/8FC_eMDnCRg&amp;hl=en_US&amp;fs=1?rel=0" /><param name="allowfullscreen" value="true" /><embed type="application/x-shockwave-flash" width="450" height="273" src="http://www.youtube.com/v/8FC_eMDnCRg&amp;hl=en_US&amp;fs=1?rel=0" allowscriptaccess="always" allowfullscreen="true"></embed></object><br />
+Sounds like a service I need to try.</p>
+<blockquote><p><em>Startups:</em> <a href="http://venturehacks.com/startuplist">Get intros to AngelList here</a>.<br />
+<em>Angels</em><em>:</em> <a href="http://angel.co/apply">Join AngelList here</a>.<br />
+<em>Everyone:</em> Get AngelList updates via <a href="http://twitter.com/angellist">Twitter</a> and <a href="http://feeds.venturehacks.com/angellist">RSS</a>.<em><a href="http://feeds.venturehacks.com/angellist"><br />
+</a></em></p></blockquote>
+			</div>	
+
+<!-- nivi --><script src="http://feeds.feedburner.com/~s/venturehacks?i=http://venturehacks.com/articles/thumbtack-angellist" type="text/javascript" charset="utf-8"></script>
+
+			<p class="tagged"><span class="add_comment"><a href="http://venturehacks.com/articles/thumbtack-angellist#comments" title="Comment on Thumbtack raises money with AngelList">&rarr; 2 Comments</a></span><strong>Learn more about:</strong> <a href="http://venturehacks.com/topics/angellist" title="View all posts in AngelList" rel="category tag">AngelList</a></p>
+			<div class="clear"></div>
+			
+											
+			<h2><a href="http://venturehacks.com/articles/angels-share" rel="bookmark" title="Permanent Link to Fred Wilson: &#8220;Angels love to share deals with each other&#8221;">Fred Wilson: &#8220;Angels love to share deals with each other&#8221;</a></h2>
+<h4><p style="color:black;padding-bottom:2px;font-family:helvetica;font-style:normal;">by Nivi on July 26th, 2010<br /><!-- nivi &middot; --> <!-- nivi a href="http://venturehacks.com/articles/angels-share#comments">2 Comments</a --></h4>
+			<!-- h4>July 26th, 2010</h4 -->
+			<div class="entry">
+				<p><a href="http://www.avc.com/a_vc/2010/07/the-angellist.html"><img class="right" src="http://venturehacks.com/wordpress/wp-content/uploads/2010/07/fredwilson_bigger.jpg" alt="" /></a><a href="http://www.avc.com/a_vc/2010/07/the-angellist.html">Fred Wilson reviews AngelList</a>:</p>
+<blockquote><p>&#8220;…The old model of angel deals is alive and well. Angels love to share deals with each other. It is how angel rounds come together. But AngelList adds at least two things to the mix. First, it adds a place where the deals can come together online. <strong>And second it adds people to the mix that would not be part of the offline deal sharing networks that already exist.</strong></p>
+<p>&#8220;I am on AngelList. I see all the deals come together. I don&#8217;t personally invest in angel deals in the web/tech space because of potential conflict with USV down the road. But even so, I find it immensely useful to see what companies are getting traction in the angel market. It&#8217;s part of my radar/early warning system. And it is entirely possible that we will decide that USV needs to participate in an angel round that is coming together on AngelList, although that has not yet happened.</p>
+<p><em>&#8220;</em><strong>So if you are putting together an angel round, particularly if you already have it partially raised but need to finish it off, I strongly suggest looking into AngelList. </strong>It&#8217;s a great service.&#8221;</p>
+<p>[<strong>Emphasis added</strong>.]</p></blockquote>
+<p>Fred describes our value proposition better than we do. It&#8217;s not just great PR when your users blog and tweet about you — it&#8217;s also a form of customer development.</p>
+			</div>	
+
+<!-- nivi --><script src="http://feeds.feedburner.com/~s/venturehacks?i=http://venturehacks.com/articles/angels-share" type="text/javascript" charset="utf-8"></script>
+
+			<p class="tagged"><span class="add_comment"><a href="http://venturehacks.com/articles/angels-share#comments" title="Comment on Fred Wilson: &#8220;Angels love to share deals with each other&#8221;">&rarr; 2 Comments</a></span><strong>Learn more about:</strong> <a href="http://venturehacks.com/topics/angellist" title="View all posts in AngelList" rel="category tag">AngelList</a></p>
+			<div class="clear"></div>
+			
+						
+			
+<div class="navigation">
+	<div class="previous"><a href="http://venturehacks.com/images/10.100.jpg/page/2" >&larr; Older Articles</a></div>
+	<div class="next"></div>
+</div>
+<div class="clear flat"></div>
+
+			
+				
+		</div>
+
+		<div id="sidebar">
+	<ul class="sidebar_list">
+				<li class="widget">
+			<div id="advertisement">
+	<div class="caption">Our Ad</div>
+	      <center><script type="text/javascript" src="http://engine.influads.com/publisher/v/Css"></script></center>
+</div>
+
+<br />
+<div id="advertisement">
+	<div class="caption">Our Books</div>
+
+	<!-- a href="http://venturehacks.com/pitching"><img src="http://venturehacks.com/wordpress/wp-content/uploads/2009/02/pitching-hacks.png" /></a -->
+
+<a href="http://leanpub.com/venturehacks/"><img src="http://venturehacks.com/wordpress/wp-content/uploads/2010/04/bible.png" /></a>
+	<p>Every post in one book. Constantly updated. Check out the <a href="http://leanpub.com/samples/venturehacks-sample.pdf">free sample</a> (pdf).</p>
+<br />
+<a href="http://venturehacks.com/pitching"><img src="http://venturehacks.com/wordpress/wp-content/uploads/2009/10/pitching-hacks.png" /></a>
+	<p>Check out the <a href="http://venturehacks.com/pitching">free samples</a>.</p>
+</div>
+<!-- div id="advertisement">
+	<div class="caption">Our Spreadsheet</div>
+	
+<a href="http://venturehacks.com/articles/cap-table"><img src="http://venturehacks.com/wordpress/wp-content/uploads/2009/10/cap-table.png" /></a>
+	<p>Check out the <a href="http://venturehacks.com/articles/cap-table">video tour</a>.</p>
+</div -->
+	<!-- a href="http://crv.com" onClick="javascript: pageTracker._trackPageview('/outgoing/crv.com');"><img src="http://venturehacks.com/wordpress/wp-content/themes/Cutline 1.1/images/advertisements/crv.png" /></a>
+	<p><a href="http://crv.com" onClick="javascript: pageTracker._trackPageview('/outgoing/crv.com');">Charles River Ventures</a>: We back people who want to change the world.</p -->
+
+<!-- div id="advertisement">
+	<div class="caption"><a href="#supporter" name="supporter" style="color:black;text-decoration:none;">Supporter Posts</a></div>
+<br />
+<a href="http://walkercorporatelaw.com/blog" onClick="javascript: pageTracker._trackPageview('/outgoing/walkercorporatelaw.com/blog');"><img align=right width=50 style="padding: 0 0 0 10px" src="http://venturehacks.com/wordpress/wp-content/uploads/2010/01/walker.png" /></a>
+	<p align=left text-color="#ffffff"><a  text-color="#ffffff" href="http://walkercorporatelaw.com/blog/" onClick="javascript: pageTracker._trackPageview('/outgoing/walkercorporatelaw.com/blog');"><em>Scott Edward Walker</em></a></p>
+
+<p align=left  ><a style="font-size:12px;font-family:helvetica;font-weight:bold;" href="http://walkercorporatelaw.com/startup-issues/ask-the-attorney-founder-vesting/" onClick="javascript: pageTracker._trackPageview('/outgoing/walkercorporatelaw.com/blog');">“Ask the Attorney” – Founder Vesting</a><br />
+
+This post is part of a new series entitled “Ask the Attorney,” which I am writing for VentureBeat (one of my favorite websites for entrepreneurs).  As the VentureBeat Editor notes on the site: “Ask the Attorney is a new VentureBeat… <a href="http://walkercorporatelaw.com/startup-issues/ask-the-attorney-founder-vesting/" onClick="javascript: pageTracker._trackPageview('/outgoing/walkercorporatelaw.com/blog');">read more&rarr;</a></p>
+</div -->
+
+<!-- a href="http://www.linkedin.com/in/navalr" onClick="javascript: pageTracker._trackPageview('/outgoing/startupboy.com');"><img src="http://venturehacks.com/wordpress/wp-content/uploads/2009/09/naval.jpg" /></a>
+	<p><a href="http://www.linkedin.com/in/navalr" onClick="javascript: pageTracker._trackPageview('/outgoing/startupboy.com');">Naval Ravikant</a>: Angel investor, Venture Hacks author.</p -->
+
+
+		</li>
+		<li class="widget">
+			<h2><a href="/about">About Us</a></h2>
+<center><a href="http://www.nivi.com/"><img width=100 src="http://venturehacks.com/wordpress/wp-content/uploads/2007/04/nivi-portrait.jpg"></a><a href="http://www.startupboy.com/"><img width=100 src="http://venturehacks.com/wordpress/wp-content/uploads/2007/12/naval-portrait.jpg"></a></center><br />
+We're <a href="http://nivi.com">Nivi</a> (<a href="http://www.linkedin.com/in/bnivi">bio</a>) and <a href="http://www.startupboy.com/">Naval</a> (<a href="http://startupboy.com/about/">bio</a>). We’re founders (Epinions), investors (Twitter), students (life), and advisors (billions).<br /><br />
+Read some fun <a href="/about#reviews"> reviews of this site</a>.	</li>
+		<li class="widget">
+			<h2>Subscribe</h2>
+ <form action="http://www.feedburner.com/fb/a/emailverify" method="post" target="popupwindow" onsubmit="window.open('http://www.feedburner.com', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true"><a href="http://feeds.venturehacks.com/venturehacks">RSS</a> &nbsp;or &nbsp;<input type="text" style="width:100px" name="email"/><input type="hidden" value="http://feeds.feedburner.com/~e?ffid=805452" name="url"/><input type="hidden" value="Venture Hacks" name="title"/>&nbsp;<input type="submit" value="Email" /></form>
+		</li>
+
+		<li class="widget">
+			<h2>Contact</h2>
+			A poem: We read every email, but can't respond to most, or we wouldn't have time, to write a post. <a href="mailto:&#x66;&#x6f;&#x75;&#x6e;&#x64;&#x65;&#x72;&#x73;&#x40;&#x76;&#x65;&#x6e;&#x74;&#x75;&#x72;&#x65;&#x68;&#x61;&#x63;&#x6b;&#x73;&#x2e;&#x63;&#x6f;&#x6d;">&#x66;&#x6f;&#x75;&#x6e;&#x64;&#x65;&#x72;&#x73;&#x40;&#x76;&#x65;&#x6e;&#x74;&#x75;&#x72;&#x65;&#x68;&#x61;&#x63;&#x6b;&#x73;&#x2e;&#x63;&#x6f;&#x6d;</a>
+			<br />(Help requests from paying customers are answered within 24 hours.)
+		</li>
+		 
+		<li class="widget">
+			<h2><a title="popular" name="popular" href="#popular">Popular Posts</a></h2>
+			<ul class='wppp_list'>
+	<li><a href='http://venturehacks.com/angellist' title='AngelList'>AngelList</a></li>
+	<li><a href='http://venturehacks.com/archives' title='Archives'>Archives</a></li>
+	<li><a href='http://venturehacks.com/articles/cap-table' title='How to make a cap table'>How to make a cap table</a></li>
+	<li><a href='http://venturehacks.com/intro' title=''></a></li>
+	<li><a href='http://venturehacks.com/articles/sean-ellis-interview' title='How to bring a product to market / A very rare interview with Sean Ellis'>How to bring a product to market / A very rare interview with Sean Ellis</a></li>
+	<li><a href='http://venturehacks.com/startuplist' title=''></a></li>
+	<li><a href='http://venturehacks.com/articles/startuplist' title='Launch: StartupList — a new way to reach angels'>Launch: StartupList — a new way to reach angels</a></li>
+	<li><a href='http://venturehacks.com/articles/hate-lawyers' title='Top 10 reasons why entrepreneurs hate lawyers'>Top 10 reasons why entrepreneurs hate lawyers</a></li>
+</ul>
+		</li>
+		
+				<!-- ?php get_links_list('id'); ? -->
+		<!-- li class="widget">
+			<h2>Our Personal Blogs</h2>
+<ul>
+				<li><a href="http://nivi.com/blog">Nivi</a></li>
+<li><a href="http://www.startupboy.com">Naval</a></li>
+			</ul>
+		</li -->
+
+
+		<li class="widget">	
+<h2>Search</h2>		
+			<form method="get" id="search_form" action="http://venturehacks.com/">
+	<input type="text" class="search_input" value="Your search here" name="s" id="s" onfocus="if (this.value == 'Your search here') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Your search here';}" />
+	<input type="hidden" id="searchsubmit" value="Search" />
+</form>
+		</li>	
+
+
+		<li class="widget">
+			<h2><a href="http://twitter.com/venturehacks">Twitter</a></h2>
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'profile',
+  rpp: 4,
+  interval: 6000,
+  width: 225,
+  height: 300,
+  theme: {
+    shell: {
+      background: '#a6a4a6',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#000000',
+      links: '#12a81c'
+    }
+  },
+  features: {
+    scrollbar: false,
+    loop: false,
+    live: false,
+    hashtags: true,
+    timestamp: true,
+    avatars: false,
+    behavior: 'all'
+  }
+}).render().setUser('venturehacks').start();
+</script></li>
+		<li class="widget">
+			
+<script type="text/javascript" src="http://static.ak.connect.facebook.com/js/api_lib/v0.4/FeatureLoader.js.php/en_US"></script><script type="text/javascript">FB.init("efcf7026d2d04a215631597b77fe9e7e");</script><fb:fan profile_id="70612138702" stream="0" connections="10" width="235"></fb:fan><div style="font-size:8px; padding-left:10px"><a href="http://www.facebook.com/pages/Venture-Hacks/70612138702">Venture Hacks on Facebook</a> </div>
+</li>
+
+
+
+		<!-- li class="widget" >
+			<h2><a href="http://twitter.com/venturehacks">Twitter</a></h2>
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'search',
+  search: 'venturehacks',
+  interval: 20000,
+  title: 'Venture Hacks on Twitter',
+subject: '',
+  width: 225,
+  height: 500,
+  theme: {
+    shell: {
+      background: '#a6a4a6',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#000000',
+      links: '#12a81c'
+    }
+  },
+  features: {
+    scrollbar: true,
+    loop: false,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    behavior: 'all'
+  }
+}).render().start();
+</script>
+</li -->
+
+
+<div id="advertisement">
+	<div class="caption">Our Daily Newsletter</div>
+<a href="http://venturehacks.com/articles/best-advice"><img src="http://venturehacks.com/wordpress/wp-content/uploads/2009/12/startupnews.png" /></a>
+	<p>Sign up via <a href="http://capitolcircle.us1.list-manage.com/subscribe?u=bd9e9122becd7af58b9ac335b&id=b2bda72936">email</a> or <a href="http://feeds.venturehacks.com/venturehacks-twitter">RSS</a>. <a href="http://venturehacks.com/articles/best-advice">Learn more</a>.</p>
+</div>
+<br />
+
+<div id="advertisement">
+	<div class="caption">Our Bookstore</div>
+<a href="http://venturehacks.com/bookstore/"><img src="http://venturehacks.com/wordpress/wp-content/uploads/2009/12/bookstore.png" /></a>
+	<p>See our <a href="http://venturehacks.com/bookstore">recommendations</a>.</p>
+</div>
+<br />
+
+<div id="advertisement">
+	<div class="caption">All our products</div>
+
+<a href="http://venturehacks.com/happy-meal"><img src="http://venturehacks.com/wordpress/wp-content/uploads/2009/12/happymeal.png" alt="" width="100" /></a>
+
+<p><a href="http://venturehacks.com/pitching">Pitching Hacks</a>, <a href="http://venturehacks.com/articles/cap-table">Cap Table</a>, and <a href="http://venturehacks.com/articles/co-founder-interview">Co-founder Interview</a>. <em>Save 30%</em>. <a href="http://venturehacks.com/happy-meal">Buy it here</a>.</p>
+</div>
+<br />
+
+<div id="advertisement"><em><a href="/disclaimer" style="color:red;text-align:left;size:2em;">Disclaimer: This is not legal advice.</a></em></div>
+
+	
+<!-- li class="widget">
+<script type="text/javascript" src="http://pub.mybloglog.com/comm2.php?mblID=2007040315581297&amp;c_width=180&amp;c_sn_opt=y&amp;c_rows=7&amp;c_img_size=f&amp;c_heading_text=Venture+Hacks+Community&amp;c_color_heading_bg=FF66CC&amp;c_color_heading=FFFFFF&amp;c_color_link_bg=FFFFFF&amp;c_color_link=000000&amp;c_color_bottom_bg=FF66CC"></script>
+</li -->
+
+			</ul>
+</div>
+	
+	</div>
+
+<script type="text/javascript" src="http://www.wordvu.com/js/copyvu.js?id=1_ZG1WdWRIVnlaV2hoWTJ0ekxtTnZiUT09"></script>
+
+<meta name="bitly-verification" content="029cca4f41f2">
+
+	<div id="footer">
+		<p>&copy; 2007 Venture Hacks (not including the pictures) &mdash;  <!-- nivi a href="http://venturehacks.com/sitemap/">Sitemap</a --> <a href="http://cutline.tubetorial.com/">Cutline</a> Theme by <a href="http://www.tubetorial.com">Chris Pearson</a></p>
+		<!-- Google Analytics Tracking by Google Analyticator 5.3.1: http://plugins.spiralwebconsulting.com/analyticator.html -->
+	<script type="text/javascript">
+		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+	</script>
+
+	<script type="text/javascript">
+	try {
+		var pageTracker = _gat._getTracker("UA-1602828-1");
+		pageTracker._initData();
+		pageTracker._trackPageview();
+	} catch(err) {}</script>
+			<script type="text/javascript">
+				var analyticsFileTypes = [''];
+				var analyticsEventTracking = 'enabled';
+			</script>
+			<script src="http://stats.wordpress.com/e-201036.js" type="text/javascript"></script>
+<script type="text/javascript">
+st_go({blog:'10145247',v:'ext',post:'0'});
+var load_cmc = function(){linktracker_init(10145247,0,2);};
+if ( typeof addLoadEvent != 'undefined' ) addLoadEvent(load_cmc);
+else load_cmc();
+</script>
+	</div>
+</div>
+
+<!-- nivi -->
+<script type="text/javascript" src="http://cetrk.com/pages/scripts/0004/6591.js"> </script>
+
+</body>
+</html>
+<!-- Dynamic page generated in 0.449 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2010-09-07 21:26:17 -->
