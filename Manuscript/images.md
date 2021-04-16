@@ -1,7 +1,7 @@
 # Images {#images}
 
 
+Here's an image within a nested subdirectory:
 
-This image has a bad file name and is a gif, so needs to be converted:
+![](images/nested/smile2.png)
 
-![](images/811.strip.gif)
