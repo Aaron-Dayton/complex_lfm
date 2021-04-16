@@ -1,7 +1,7 @@
 # Images {#images}
 
+FAILS:
 
-This is an image with no src, but with a caption:
+![](811.strip.gif)
 
-![Some caption]()
-
+This image has a filename including `.`s: ![](bad.file.name.png)
