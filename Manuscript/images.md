@@ -17,3 +17,21 @@ This was a gif: ![](images/thisisagif.gif)
 This image is bad **and** has a bad file name: ![](images/10.100.jpg)
 
 This image does not exist: ![](images/doesnotexist.png)
+
+An image with a path like `./images/thisisagif.gif`:
+
+![](./images/thisisagif.gif)
+
+An image with a backslash in it:
+
+![](images\thisisagif.gif)
+
+A missing image with a backslash in it:
+
+![](images\foooooo.png)
+
+A paragraph with nothing but an image inside an anchor tag:
+
+[![](images/25mic.jpg)](http://example2.com)
+
+An image with bold text in the caption:
