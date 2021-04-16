@@ -1,3 +1,5 @@
 # Images {#images}
 
-![](symbols/apple&.png)
+![](symbols/video#.mp4)
+
+![](symbols/v.ideo.mp4)
