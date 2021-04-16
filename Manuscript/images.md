@@ -12,9 +12,9 @@
 
 ![](smile.png.png)
 
-![](absolute.jpeg)
+![](ab.jpg.jpeg)
 
-![](absolute.jpg.jpeg)
+![](ab2.jpeg)
 
 ![](symbols/video#.mp4)
 
