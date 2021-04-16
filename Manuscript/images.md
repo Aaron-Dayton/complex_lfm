@@ -9,3 +9,7 @@
 ![](symbols/a.udio.mp4)
 
 ![](symbols/apple..png)
+
+![](bad.file.name.png)
+
+![](811.strip.gif)
