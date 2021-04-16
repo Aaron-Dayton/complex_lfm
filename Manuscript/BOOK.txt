@@ -1,9 +1,11 @@
-frontmatter:
-preface.md
-images.md
-image-scaling.txt
-mainmatter:
-unicode.md
-text.md
-codeblocks.txt
-large_code_sample.txt
+math.md
+file with spaces.md
+tables.txt
+asides.md
+warnings.txt
+MissionStatement.mkd
+missing.md
+pmpexam.txt
+WeirdCapitalization.md
+pandoc_testing.docx
+bad_characters.docx
