@@ -1,4 +1,3 @@
 frontmatter:
-preface.md
+images.md
 
-image-scaling.txt
