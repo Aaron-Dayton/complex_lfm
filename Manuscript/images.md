@@ -1,8 +1,10 @@
 # Images {#images}
 
 
-This is an image with no src, but with a caption:
+Here's an image within a nested subdirectory:
 
-![Some caption]()
+![](images/nested/smile2.png)
 
-This image has a filename including `.`s: ![](images/bad.file.name.png)
+This image has a bad file name and is a gif, so needs to be converted:
+
+![](images/811.strip.gif)
