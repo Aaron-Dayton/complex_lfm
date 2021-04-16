@@ -1,5 +1,4 @@
-mainmatter:
-unicode.md
-text.md
-codeblocks.txt
-large_code_sample.txt
+frontmatter:
+preface.md
+images.md
+
