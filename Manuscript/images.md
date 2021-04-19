@@ -1,13 +1,7 @@
 Images
 
-![](bad.file.name.png)
+![](811.strip.gif)
 
-![](symbols/video#.mp4)
+![](thisisagif.gif)
 
-![](symbols/v.ideo.mp4)
-
-![](symbols/audio#.mp4)
-
-![](symbols/a.udio.mp4)
-
-![](symbols/apple..png)
+![](smile2.png)
