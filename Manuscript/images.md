@@ -1,6 +1,6 @@
 Images
 
-![](811.strip.gif)
+
 
 ![](thisisagif.gif)
 
