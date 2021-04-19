@@ -2,59 +2,59 @@ Images
 
 0
 
-![](dot.dir/image012.jpg)
+![](images/dot.dir/image012.jpg)
 
 1
 
-![](bad.file.name.png)
+![](images/bad.file.name.png)
 
 2
 
-![](811.strip.gif)
+![](images/811.strip.gif)
 
 3
 
-![](thisisagif.gif)
+![](images/thisisagif.gif)
 
 4
 
-![](smile2.png)
+![](images/smile2.png)
 
 5
 
-![](thisisagif2.gif.gif)
+![](images/thisisagif2.gif.gif)
 
 6
 
-![](smile.png.png)
+![](images/smile.png.png)
 
 7
 
-![](ab.jpg.jpeg)
+![](images/ab.jpg.jpeg)
 
 8
 
-![](ab2.jpeg)
+![](images/ab2.jpeg)
 
 9
 
-![](symbols/video#.mp4)
+![](images/symbols/video#.mp4)
 
 0
 
-![](symbols/v.ideo.mp4)
+![](images/symbols/v.ideo.mp4)
 
 1
 
-![](symbols/audio#.mp4)
+![](images/symbols/audio#.mp4)
 
 2
 
-![](symbols/a.udio.mp4)
+![](images/symbols/a.udio.mp4)
 
 3
 
-![](symbols/apple..png)
+![](images/symbols/apple..png)
 
 4
 
