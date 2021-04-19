@@ -1,13 +1,16 @@
 # Images {#images}
 
-![](bad.file.name.png)
 
-![](811.strip.gif)
+![](ab.jpg.jpeg)
 
-![](thisisagif.gif)
+![](ab2.jpeg)
 
-![](smile2.png)
+![](symbols/video#.mp4)
 
-![](thisisagif2.gif.gif)
+![](symbols/v.ideo.mp4)
 
-![](smile.png.png)
+![](symbols/audio#.mp4)
+
+![](symbols/a.udio.mp4)
+
+![](symbols/apple..png)
