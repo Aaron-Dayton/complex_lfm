@@ -1,5 +1,6 @@
 Images
 
+![](bad.file.name.png)
 
 ![](symbols/video#.mp4)
 
