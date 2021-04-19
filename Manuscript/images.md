@@ -1,4 +1,7 @@
-Images
+# Images {#images}
+
+{type: image, format: png}
+![](https://github.com/Aaron-Dayton/complex_lfm/blob/master/Manuscript/Images/bad.file.name.png?raw=true)
 
 0
 
@@ -58,7 +61,50 @@ Images
 
 4
 
-# Images {#images}
+![](images/symbols/a.udio.mp3)
+
+![](images/symbols/apple space.png)
+
+![](images/symbols/apple_.png)
+
+![](images/symbols/apple-.png)
+
+![](images/symbols/apple!.png)
+
+![](images/symbols/apple..png)
+
+![](images/symbols/apple.png)
+
+![](images/symbols/apple().png)
+
+![](images/symbols/apple[].png)
+
+![](images/symbols/apple@.png)
+
+![](images/symbols/apple*.png)
+
+![](images/symbols/apple/.png)
+
+![](images/symbols/apple&.png)
+
+![](images/symbols/apple#.png)
+
+![](images/symbols/apple%.png)
+
+![](images/symbols/apple`.png)
+
+![](images/symbols/apple+.png)
+
+![](images/symbols/apple<>,?''"";|.png)
+
+![](images/symbols/apple=.png)
+
+![](images/symbols/apple~.png)
+
+![](images/symbols/apple$.png)
+
+![](images/symbols/audio#.mp3)
+
 
 [This should link to example.com/images][1]
 
