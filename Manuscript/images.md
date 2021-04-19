@@ -1,9 +1,5 @@
-# Images {#images}
+Images
 
-
-![](ab.jpg.jpeg)
-
-![](ab2.jpeg)
 
 ![](symbols/video#.mp4)
 
