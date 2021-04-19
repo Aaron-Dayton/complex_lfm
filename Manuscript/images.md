@@ -1,3 +1,4 @@
 Images
 
-![](smile2.png)
+
+![](thisisagif.gif)
